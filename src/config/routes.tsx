@@ -7,6 +7,8 @@ import TodoCardPage from "../pages/TodoCardPage";
 import TodoRecordPage from "../pages/TodoRecordPage";
 
 import ErrorPage from "../pages/ErrorPage";
+import EmployeesPage from "../pages/Employees";
+import NewOfficePage from "../pages/NewOfficePage";
 
 interface IRouteItem extends ISwitchItem {
   sideMenu: string;
@@ -22,6 +24,16 @@ export const routes: IRouteItem[] = [
     path: "/dashboard",
     sideMenu: "root.example_pages.dashboard",
     element: DashboardPage,
+  },
+  {
+    path: "/employees",
+    sideMenu: "root.example_pages.employees",
+    element: EmployeesPage,
+  },
+  {
+    path: "/employees/office/new",
+    sideMenu: "root.example_pages.employees",
+    element: NewOfficePage,
   },
   {
     path: "/todos_list",
@@ -59,6 +71,7 @@ export const sideMenuClickMap: Record<string, string> = {
   "root.example_pages.todos_list": "/todos_list",
   "root.example_pages.todos_card": "/todos_card",
   "root.example_pages.dashboard": "/dashboard",
+  "root.example_pages.employees": "/employees",
 };
 
 export default routes;
